@@ -25,7 +25,7 @@
                 <div class="mid">
                     <p>
                         I love working on creative designs that can bring in the best User Experience.
-                        <router-link :to="{name: 'know-more'}">More</router-link>
+                        <router-link :to="{name: 'know-more'}" @click.native="scrollToTop">More</router-link>
                     </p>
                 </div>
                 <div class="body">
@@ -59,6 +59,9 @@ export default {
     components: {
         SideBadge,
     },
+    methods: {
+        scrollToTop() { window.scrollTo(0, 0); }
+    }
 }
 </script>
 
@@ -94,6 +97,7 @@ export default {
 {
     padding: 40px 0;
     height: 175px;
+
     a, p
     {
         font-weight: 600;
@@ -146,7 +150,7 @@ export default {
 
 .body
 {
-    height: 240px;
+    height: 250px;
     padding: 25px 30px;
     background: #FFE9AF;
     border-radius: 10px;
@@ -164,8 +168,8 @@ export default {
 
     p
     {
-        font-weight: 600;
-        font-size: 16px;
+        font-weight: 400;
+        font-size: 18px;
         line-height: 1.5;
         text-align: justify;
     }
@@ -187,6 +191,78 @@ export default {
     top: 50px;
     z-index: -1;
     right: -35px;
+}
+
+@media only screen and (max-width: 1440px)
+{
+    .about { margin: 125px 0; }
+
+    .body
+    {
+        min-height: 240px;
+        height: auto;
+    }
+
+    .about-box { margin-top: 0; }
+
+    .about-left { height: 300px; }
+}
+
+@media only screen and (max-width: 1023px)
+{
+    .about-box
+    {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto 50px;
+    }
+
+    .mid
+    {
+        padding: 30px 0;
+        height: auto;
+        text-align: center;
+    }
+
+    .body
+    {
+        min-height: auto;
+
+        span
+        {
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+
+    .about-left { top: 0; }
+
+    .about-right { top: auto; bottom: 50px; }
+}
+
+@media only screen and (max-width: 767px)
+{
+    .about { margin-bottom: 75px; }
+
+    .about-right { display: none; }
+
+    .mid
+    {
+        p { font-size: 20px; font-weight: 400; }
+
+        a { font-size: 20px; }
+    }
+
+    .body
+    {
+        padding: 40px 25px;
+
+        p
+        {
+            font-weight: 400;
+            margin-top: 15px;
+        }
+    }
 }
 
 </style>

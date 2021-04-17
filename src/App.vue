@@ -27,7 +27,6 @@ html
 {
 	overflow-x: hidden;
 	scroll-behavior: smooth;
-	height: 100%;
 	scrollbar-color: @primary-color;
 
 	&.no-scroll
@@ -41,7 +40,6 @@ html
 body
 {
 	overflow-x: hidden;
-	height: 100%;
 	scrollbar-color: @primary-color;
 	scroll-behavior: smooth;
 
@@ -161,6 +159,16 @@ h2.sub-headings
 .icons-sprite
 {
 	background-image: url('./assets/icons_sprite.png');
+}
+
+@media only screen and (max-width: 1023px)
+{
+	h2.sub-headings
+	{
+		text-align: center;
+
+		&::after { transform: translateX(-50%); left: 50%; }
+	}
 }
 
 @media (max-width: 767px)

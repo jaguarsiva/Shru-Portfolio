@@ -32,6 +32,10 @@ export default {
 	mounted () {
 
 		const navLinks = this.$refs.navBar.$refs.navLinks;
+		var options = { rootMargin: "-200px" };
+
+
+
 		const sectionObserver = new IntersectionObserver( entries => {
 			entries.forEach( entry => {
 
@@ -41,7 +45,7 @@ export default {
 					navLinks.querySelector( `a#${entry.target.id}Link` ).classList.add('active');
 				}
 			});
-		}, { rootMargin: "-200px" } );
+		}, options );
 
 		Object.values( this.$refs ).forEach( ref => {
 			if( ref === this.$refs.navBar ) { return; }

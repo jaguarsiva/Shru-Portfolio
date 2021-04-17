@@ -14,11 +14,9 @@
                     <a href="tel:919789946350">+91-9789946350</a>
                 </div>
                 <div class="right flex col">
-
                     <a href="https://www.behance.net/shruthijanardh" target="_blank">Behance</a>
                     <a href="https://shruthijana.medium.com" target="_blank">Medium</a>
                     <a href="https://dribbble.com/shruthi_20" target="_blank">Dribble</a>
-
                 </div>
             </div>
 
@@ -61,6 +59,8 @@ h2
 
 .left, .mid
 {
+    width: 33%;
+
     div
     {
         font-weight: 600;
@@ -86,6 +86,8 @@ h2
 }
 
 
+.mid { text-align: center; }
+
 .email
 {
     background-size:  241.3px 209.2px;
@@ -100,9 +102,11 @@ h2
     background-position: -56px -172.9px;
 }
 
-
 .right
 {
+    width: 33%;
+    text-align: right;
+
     a
     {
         font-weight: 500;
@@ -112,7 +116,6 @@ h2
         margin-bottom: 10px;
     }
 }
-
 
 .copy-text
 {
@@ -129,6 +132,31 @@ h2
     margin: 0 10px;
     position: relative;
     top: 2px;
+}
+
+@media only screen and (max-width: 767px)
+{
+    .top { padding: 50px 0; }
+
+    .left, .mid
+    {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+
+        div { font-size: 20px; }
+
+        a { font-size: 18px; }
+    }
+
+    .right
+    {
+        width: 100%;
+        text-align: center;
+
+        a { font-size: 18px; }
+    }
+
 }
 
 </style>

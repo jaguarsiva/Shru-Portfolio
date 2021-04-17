@@ -6,7 +6,7 @@
 
         <nav ref="nav">
             <div class="container flex align-center">
-                 <router-link to="/">
+                 <router-link to="/" @click.native="scrollToTop">
                     <img src="../assets/logo.png" alt="Shruthi's Portfolio logo" class="logo">
                 </router-link>
             </div>
@@ -138,16 +138,19 @@ export default {
 			entries.forEach( entry => {
                 if( entry.isIntersecting )
                 {
-                    this.$refs.nav.classList.remove( 'sticky' );
+                    this.$refs.nav && this.$refs.nav.classList.remove( 'sticky' );
                 }
                 else
                 {
-                    this.$refs.nav.classList.add( 'sticky' );
+                    this.$refs.nav && this.$refs.nav.classList.add( 'sticky' );
                 }
 			});
 		}, {  } );
 		observer.observe( this.$refs.header );
-	}
+	},
+    methods: {
+        scrollToTop() { window.scrollTo(0, 0); }
+    },
 }
 </script>
 
@@ -156,7 +159,7 @@ export default {
 .know-more
 {
     background-color: #FFE9AF;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     position: relative;
     z-index: 2;
 }
@@ -170,7 +173,7 @@ nav
 
     &.sticky
     {
-        position: sticky;
+        position: fixed;
         top: 0;
         left: 0;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -186,7 +189,6 @@ nav
 
     to { transform: translateY(0); }
 }
-
 
 img.logo
 {
@@ -253,7 +255,7 @@ p
 
 .sub-box
 {
-    margin-bottom: 40px;
+    &:first-child { margin-bottom: 50px; }
 
     img
     {
@@ -278,5 +280,67 @@ p
     z-index: -1;
     opacity: 0.6;
 }
+
+@media only screen and (max-width: 1440px)
+{
+    .know-more { padding-bottom: 50px; }
+
+    .pb-100 { padding-bottom: 25px; }
+
+    .top, .bottom { bottom: 75px; }
+}
+
+@media only screen and (max-width: 1023px)
+{
+    h3.main-heading { text-align: center; }
+
+    .box
+    {
+        width: 100%;
+        max-width: 767px;
+        margin: 40px auto;
+    }
+
+    .sub-box:first-child { margin-bottom: 75px; }
+
+    .know-more { padding-bottom: 100px; }
+
+    .pb-100 { padding-bottom: 50px; }
+
+    .top, .bottom { bottom: 125px; }
+}
+
+@media only screen and (max-width: 767px)
+{
+    .img-box
+    {
+        width: 100%;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+
+    .sub-box
+    {
+        .flex.nowrap { flex-wrap: wrap; }
+
+        img
+        {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 425px)
+{
+    img.logo
+    {
+        height: auto;
+        width: 175px;
+    }
+}
+
 
 </style>

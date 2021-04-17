@@ -1,5 +1,5 @@
 <template>
-<div class="skills" id="skills" ref="skills">
+<div class="skills" id="skills" >
 
     <img src="../assets/patterns/skills_right.png" alt="pattern" class="skills-right">
 
@@ -48,8 +48,6 @@
                     <span class="wireframing"></span>
                 </div>
             </div>
-
-
         </div>
 
     </div>
@@ -67,13 +65,13 @@ export default {
         const observer = new IntersectionObserver( entries => {
 			entries.forEach( entry => {
                 if( entry.isIntersecting )
-                    this.$refs.skillsContents.classList.add('show');
+                    this.$refs.skillsContents && this.$refs.skillsContents.classList.add('show');
                 else
-                    this.$refs.skillsContents.classList.remove('show');
+                    this.$refs.skillsContents && this.$refs.skillsContents.classList.remove('show');
 
 			});
 		}, { threshold: '0.5' } );
-		observer.observe( this.$refs.skills );
+		observer.observe( this.$refs.skillsContents );
     },
 }
 </script>
@@ -89,7 +87,6 @@ export default {
 
     h2::after { width: 60px; }
 }
-
 
 p
 {
@@ -141,7 +138,6 @@ p
     }
 }
 
-
 .skills-left
 {
     position: absolute;
@@ -176,9 +172,80 @@ p
     to { opacity: 0; width: 400px;  height: 500px; }
 }
 
-.skills-icon
+.skills-icon { height: 500px; }
+
+@media only screen and (max-width: 1440px)
 {
-    height: 500px;
+    .skills { padding-bottom: 0; }
+
+    .skill-box .progress-bar { width: 400px; }
+
+    .skills-icon { height: 400px; }
+
+    .skills-left { height: 200px; }
+
+    .skills-right { height: 300px; }
+
+    .ellipse-before, .ellipse-after { bottom: 0; }
+
+    .ellipse-after { width: 400px; height: 450px; }
+
+    .ellipse-before { width: 300px; height: 400px; }
+
+    @keyframes ellipse
+    {
+        from { opacity: 1; width: 400px;  height: 450px;  }
+
+        to { opacity: 0; width: 300px;  height: 400px; }
+    }
+}
+
+@media only screen and (max-width: 1023px)
+{
+    .skills { margin-top: 0; }
+
+    .skills-left { top: -25px; }
+
+    .skills-right { top: auto; bottom: 0; }
+
+    .ellipse-before, .ellipse-after { bottom: auto; top: 50px; }
+
+    .skills-icon { margin-bottom: 75px; }
+
+    .container { flex-direction: column; }
+
+    .skills-contents { width: 100%; max-width: 600px; }
+
+    .skill-box .progress-bar
+    {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    p { text-align: center; }
+}
+
+@media only screen and (max-width: 767px)
+{
+    .skills-left { display: none; }
+
+    .skills-right { top: 0; bottom: auto; }
+
+    .skills-icon { width: 100%; height: auto; order: 2; margin: 75px 0 0; max-width: 350px;  }
+
+    .ellipse-before { bottom: 0; top: auto; height: 350px; width: auto; }
+
+    .ellipse-after { display: none; }
+
+    .skill-box h4 { padding-left: 15px; }
+
+    p
+    {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 50px;
+    }
 }
 
 </style>
