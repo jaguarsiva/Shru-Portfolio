@@ -1,5 +1,5 @@
 <template>
-<div class="banner" ref="banner">
+<div class="banner" ref="banner" id="home">
 
     <img src="../assets/patterns/banner_left_before.png" alt="pattern" class="left-before">
     <img src="../assets/patterns/banner_left_after.png" alt="pattern" class="left-after">
@@ -25,23 +25,29 @@
 </template>
 
 <script>
-export default {
+export default
+{
 	mounted () {
 		const observer = new IntersectionObserver( entries => {
 			entries.forEach( entry => {
                 this.$store.dispatch('setBannerVisiblity', entry.isIntersecting );
 			});
-		}, { threshold: 0.1 } );
+		}, { rootMargin: '-200px' } );
 		observer.observe( this.$refs.banner );
-	},
+	}
 }
 </script>
 
 <style lang="less" scoped>
 
-.banner { position: relative; }
+.banner
+{
+    position: relative;
+    margin-bottom: 75px;
 
-.banner .container { position: relative; }
+    & .container { position: relative; }
+}
+
 
 .banner-contents
 {

@@ -66,7 +66,7 @@ export default {
 
 .about
 {
-    padding: 75px 0;
+    margin: 75px 0;
 
     .container { position: relative; }
 }
@@ -146,7 +146,7 @@ export default {
 
 .body
 {
-    height: 230px;
+    height: 240px;
     padding: 25px 30px;
     background: #FFE9AF;
     border-radius: 10px;
