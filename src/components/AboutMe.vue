@@ -13,7 +13,7 @@
                 <h4 class="head">Reach me</h4>
                 <div class="mid">
                     <a href="mailto:shruthijana501@gmail.com">shruthijana501@gmail.com</a>
-                    <a href="#">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/shruthi-janardhanan-3870301a5/" target="_blank">LinkedIn</a>
                 </div>
                 <div class="body">
                     <span>UI/UX Designer</span>
@@ -36,7 +36,7 @@
             <div class="about-box about-box-3">
                 <h4 class="head">Connect</h4>
                 <div class="mid flex justify-btw align-center">
-                    <a href="#" target="_blank"> <div class="icons-sprite insta"></div> </a>
+                    <a href="https://www.instagram.com/shru_thi20/" target="_blank"> <div class="icons-sprite insta"></div> </a>
                     <a href="https://www.behance.net/shruthijanardh" target="_blank"> <div class="icons-sprite behance"></div> </a>
                     <a href="https://shruthijana.medium.com" target="_blank"> <div class="icons-sprite medium"></div> </a>
                     <a href="https://dribbble.com/shruthi_20" target="_blank"> <div class="icons-sprite dribble"></div> </a>

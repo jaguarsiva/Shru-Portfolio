@@ -12,7 +12,7 @@
                 Hello! I am <span>S</span>hruthi
             </h1>
             <h2>UI / UX DESIGNER</h2>
-            <a href="#" class="btn fancy-btn flex center ml-auto mr-auto">
+            <a :href="`${publicPath}resume.pdf`" download="Shru's Resume.pdf" class="btn fancy-btn flex center ml-auto mr-auto">
                 Resume
                 <div class="icons-sprite download"></div>
             </a>
@@ -27,6 +27,11 @@
 <script>
 export default
 {
+    data () {
+        return {
+            publicPath: process.env.BASE_URL
+        }
+    },
 	mounted () {
 
         var options = { rootMargin: '-200px' } ;
@@ -91,8 +96,6 @@ h2
     line-height: 1;
     color: #000000;
     padding-bottom: 3px;
-
-    &::after { background-color: rgba(0, 0, 0, 0.25); }
 }
 
 .download

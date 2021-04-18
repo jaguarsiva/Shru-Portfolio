@@ -34,70 +34,94 @@
         </div>
 
         <div class="works-outer flex justify-btw">
-            <div class="works-box flex center" v-if="type === 'all' || type === 'photography'">
+            <a href="https://www.behance.net/gallery/112400129/A-Mobile-Photography"
+                target="_blank"
+                class="works-box flex center"
+                v-if="type === 'all' || type === 'photography'">
                 <img src="../assets/work/work1.png" alt="works">
                 <h4 class="flex center">
                     The Bustling City
                     <br />
                     A mobile photography
                 </h4>
-            </div>
-            <div class="works-box flex center" v-if="type === 'all' || type === 'mobile app'">
+            </a>
+            <a href="https://www.behance.net/gallery/112888517/Hairstyle-Generator-App"
+                target="_blank"
+                class="works-box flex center"
+                v-if="type === 'all' || type === 'mobile app'">
                 <img src="../assets/work/work2.png" alt="works">
                 <h4 class="flex center">
                     Hairstyle Generator
                     <br />
                     Mobile app
                 </h4>
-            </div>
-            <div class="works-box flex center" v-if="type === 'all' || type === 'mobile app'">
+            </a>
+            <a href="https://www.behance.net/gallery/113334255/DIY-Home-Decors-App"
+                target="_blank"
+                class="works-box flex center"
+                v-if="type === 'all' || type === 'mobile app'">
                 <img src="../assets/work/work3.png" alt="works">
                 <h4 class="flex center">
                     DIY Home Decors
                     <br />
                     A mobile App
                 </h4>
-            </div>
-            <div class="works-box flex center" v-if="type === 'all' || type === 'website'">
+            </a>
+            <a href="https://www.behance.net/gallery/114041181/Travel-Landing-page"
+                target="_blank"
+                class="works-box flex center"
+                v-if="type === 'all' || type === 'website'">
                 <img src="../assets/work/work4.png" alt="works">
                 <h4 class="flex center">
                     Travel Landing page
                     <br />
                     Website
                 </h4>
-            </div>
-            <div class="works-box flex center" v-if="type === 'all' || type === 'website'">
+            </a>
+            <a href="https://www.behance.net/gallery/114864413/A-winter-clothing-store"
+                target="_blank"
+                class="works-box flex center"
+                v-if="type === 'all' || type === 'website'">
                 <img src="../assets/work/work5.png" alt="works">
                 <h4 class="flex center">
                     Winter Clothing Store
                     <br />
                     Website
                 </h4>
-            </div>
-            <div class="works-box flex center" v-if="type === 'all' || type === 'mobile app'">
+            </a>
+            <a href="https://www.behance.net/gallery/115341975/Mobile-Fitness-Tracker"
+                target="_blank"
+                class="works-box flex center"
+                v-if="type === 'all' || type === 'mobile app'">
                 <img src="../assets/work/work6.png" alt="works">
                 <h4 class="flex center">
                     Fitness Generator
                     <br />
                     Mobile App
                 </h4>
-            </div>
-            <div class="works-box flex center" v-if="type === 'all' || type === 'mobile app'">
+            </a>
+            <a href="https://www.behance.net/gallery/115817357/A-Mobile-travel-guide-App"
+                target="_blank"
+                class="works-box flex center"
+                v-if="type === 'all' || type === 'mobile app'">
                 <img src="../assets/work/work7.png" alt="works">
                 <h4 class="flex center">
                     Travello- A mobile
                     <br />
                     Travel Guide
                 </h4>
-            </div>
-            <div class="works-box flex center" v-if="type === 'all' || type === 'poster'">
+            </a>
+            <a href="https://www.behance.net/gallery/115442065/Womens-Rights-Awareness-Poster"
+                target="_blank"
+                class="works-box flex center"
+                v-if="type === 'all' || type === 'poster'">
                 <img src="../assets/work/work8.png" alt="works">
                 <h4 class="flex center">
                     Women’s Rights
                     <br />
                     Awareness Poster
                 </h4>
-            </div>
+            </a>
         </div>
 
     </div>
@@ -191,7 +215,11 @@ p
         font-weight: bold;
         font-size: 18px;
 
+        &::after { background-color: #000; }
+
         &:hover::after { transform: scaleX(0); }
+
+        &.active { color: #FFFFFF; }
 
         &.active::after { transform: scaleX(1); transition: transform 0.3s ease; }
     }
@@ -209,6 +237,7 @@ p
     position: relative;
     overflow: hidden;
     border-radius: 20px;
+    cursor: pointer;
 
     img
     {
@@ -219,6 +248,7 @@ p
     h4
     {
         position: absolute;
+        color: #000;
         top: 0; left: 0;
         height: 100%;
         width: 100%;
@@ -228,7 +258,8 @@ p
         text-align: center;
         background: linear-gradient(135deg, #FFFFFF 0%, rgba(190, 190, 190, 0.1) 100%);
         border-radius: 20px;
-        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s linear;
     }
 
     &:hover
@@ -237,10 +268,7 @@ p
 
         img { filter: blur(15px); }
 
-        h4
-        {
-            visibility: visible;
-        }
+        h4 { opacity: 1; }
     }
 }
 
