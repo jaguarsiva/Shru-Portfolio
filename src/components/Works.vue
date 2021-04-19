@@ -215,7 +215,7 @@ p
         font-weight: bold;
         font-size: 18px;
 
-        &::after { background-color: #000; }
+        &::after { background-color: #ff8e00; }
 
         &:hover::after { transform: scaleX(0); }
 

@@ -115,7 +115,7 @@ img { display: block; }
 			top: 0; left: 0;
 			z-index: -1;
 			width: 100%; height: 100%;
-			background-color: #00917c;
+			background-color: #ff8e00;
 			border-radius: inherit;
 			transform: scaleX(0);
 			transform-origin: left;
