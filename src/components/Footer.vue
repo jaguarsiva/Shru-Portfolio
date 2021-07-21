@@ -14,6 +14,7 @@
                     <a href="tel:919789946350">+91-9789946350</a>
                 </div>
                 <div class="right flex col">
+                    <div> <span class="icons-sprite email"></span> Works </div>
                     <a href="https://www.behance.net/shruthijanardh" target="_blank">Behance</a>
                     <a href="https://shruthijana.medium.com" target="_blank">Medium</a>
                     <a href="https://dribbble.com/shruthi_20" target="_blank">Dribble</a>
@@ -22,11 +23,6 @@
 
         </div>
     </div>
-    <p class="copy-text flex center">
-        Copyrights
-        <span class="icons-sprite copyrights"></span>
-        2021
-    </p>
 
 </div>
 </template>
@@ -40,14 +36,12 @@ footer
 
 h2
 {
-    text-align: center;
-    margin-bottom: 60px;
-
-    &::after
-    {
-        left: 50%;
-        transform: translateX(-50%);
-    }
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 60px;
 }
 
 .top
@@ -57,16 +51,14 @@ h2
     padding: 25px 0 50px;
 }
 
-.left, .mid
+.left, .mid, .right
 {
-    width: 33%;
-
     div
     {
         font-weight: 600;
         font-size: 25px;
         line-height: 1;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
     }
 
     a
@@ -85,9 +77,6 @@ h2
     }
 }
 
-
-.mid { text-align: center; }
-
 .email
 {
     background-size:  241.3px 209.2px;
@@ -102,10 +91,17 @@ h2
     background-position: -56px -172.9px;
 }
 
+.left {
+    width: 275px;
+}
+
+.mid {
+    width: 180px;
+}
+
 .right
 {
-    width: 33%;
-    text-align: right;
+    width: 150px;
 
     a
     {
@@ -115,23 +111,6 @@ h2
         color: black;
         margin-bottom: 10px;
     }
-}
-
-.copy-text
-{
-    height: 65px;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.copyrights
-{
-    background-size:  293px 254px;
-    width: 19px; height: 17px;
-    background-position: -157px -210px;
-    margin: 0 10px;
-    position: relative;
-    top: 2px;
 }
 
 @media only screen and (max-width: 767px)
@@ -156,7 +135,6 @@ h2
 
         a { font-size: 18px; }
     }
-
 }
 
 </style>

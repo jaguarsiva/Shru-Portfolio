@@ -127,6 +127,9 @@ nav
     .container
     {
         height: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 50px;
     }
 }
 
@@ -148,58 +151,71 @@ img.logo
     {
         margin-left: 50px;
 
+        &:first-child {
+            margin-left: 0;
+        }
+
         a.links
         {
             height: 40px;
-            font-size: 21px;
-            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 500;
+            padding: 0 15px;
+            display: block;
             color: rgba(0, 0, 0, 0.5);
             position: relative;
 
-            &.active, &:hover
+            &.active, &:hover, &:focus
             {
-                color: black;
+                color: #000;
 
                 &::after
                 {
                     content: '';
                     position: absolute;
-                    width: 72px; height: 3.5px;
+                    width: 100%; height: 4px;
                     border-radius: 4px;
-                    bottom: 0px; left: -4px;
+                    bottom: 0px; left: 0;
                     background-color: #FFB800;
                 }
             }
-
         }
 
         .btn.fancy-btn
         {
-            margin-left: 30px;
-            font-size: 21px;
-            font-weight: 700;
-            padding-bottom: 3px;
-            height: 50px; width: 130px;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+            margin-left: 50px;
+            font-size: 20px;
+            font-weight: 500;
+            width: 184px;
+            height: 53px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
             background: #FFB800;
-            border-radius: 15px;
+            border-radius: 10px;
             color: black;
 
-            &.active::after { transform: scaleX(1); }
+            &.active::after, &:hover::after, &:focus::after {
+                transform: scaleX(1);
+            }
         }
     }
 }
 
-@media only screen and (min-width: 1023px)
+@media only screen and (min-width: 1250px)
 {
     .hamburger { display: none; }
 }
 
-@media only screen and (max-width: 1023px)
+@media only screen and (max-width: 1400px)
+{
+    .nav-links li .btn.fancy-btn { margin-left: 0; }
+}
+
+@media only screen and (max-width: 1250px)
 {
     .nav-links { display: none; }
 
-    nav .container { padding-right: 0; }
+    nav .container { padding-right: 0; padding-left: 10px; }
 
     .hamburger
     {
@@ -303,8 +319,7 @@ img.logo
         top: 100px; left: 0;
         z-index: 3;
         overflow: hidden;
-        border-bottom: 3px solid rgb(0, 0, 0,0.5);
-        box-shadow: inset 0px 0px 12px rgba(0, 0, 0,0.15);
+        box-shadow: inset 0px 0px 12px rgba(0, 0, 0,0.25);
         animation: menu-open-anm 0.5s ease;
 
         li
@@ -318,6 +333,7 @@ img.logo
                 display: -webkit-flex;
                 display: -ms-flexbox;
                 display: flex;
+                color: #000;
                 padding: 12px 12px;
                 border-bottom: 3px solid #FFB800;
 
@@ -336,8 +352,8 @@ img.logo
                 padding: 12px 12px;
                 border-bottom: 3px solid #FFB800;
                 box-shadow: none;
-                background: #fff;
-                color: rgba(0, 0, 0, 0.5);
+                background: #fff !important;
+                color: #000;
                 justify-content: flex-start;
                 border-radius: 0;
 

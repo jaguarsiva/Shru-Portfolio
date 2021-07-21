@@ -9,9 +9,9 @@
     <div class="container flex">
         <div class="banner-contents">
             <h1>
-                Hello! I am <span>S</span>hruthi
+                Hello! I am Shruthi
             </h1>
-            <h2>UI / UX DESIGNER</h2>
+            <h2>UI DESIGNER</h2>
             <a :href="`${publicPath}resume.pdf`" download="Shru's Resume.pdf" class="btn fancy-btn flex center ml-auto mr-auto">
                 Resume
                 <div class="icons-sprite download"></div>
@@ -62,38 +62,38 @@ export default
 
 .banner-contents
 {
-    padding: 250px 15px 125px 100px;
+    width: 75%;
+    padding: 200px 0 150px;
+    text-align: center;
 }
 
 h1
 {
-    font-weight: 700;
-    font-size: 55px;
-    line-height: 1;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 60px;
     color: #000000;
-
-    span { font-size: 65px; }
 }
 
 h2
 {
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 1;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 90px;
     color: #FFB800;
-    margin: 15px 0 40px;
+    margin: 0 0 40px;
 }
 
 .btn.fancy-btn
 {
-    width: 170px;
-    height: 55px;
+    width: 275px;
+    height: 75px;
     background: #FFB800;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
     color: #000000;
     padding-bottom: 3px;
 }
@@ -108,8 +108,9 @@ h2
 
 .banner-image
 {
-    margin-left: auto;
-    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .avatar
@@ -220,7 +221,7 @@ h2
         to { opacity: 0; width: 50px; }
     }
 
-    .banner-image { margin: 0 auto; }
+    .banner-image { margin: 0 auto; position: static; }
 
     .avatar
     {
@@ -249,13 +250,19 @@ h2
         span { font-size: 33px; }
     }
 
-    h2 { font-size: 33px; margin: 20px 0 40px; }
+    h2 { font-size: 33px; margin: 0 0 40px; line-height: 1.5; }
 
     .btn.fancy-btn { width: 100%; max-width: 300px; }
 
     .avatar { height: auto; width: 100%; }
 
     .right-before { height: 300px; width: auto; }
+}
+
+
+@media only screen and (max-width: 410px)
+{
+    .banner { margin-top: 100px; }
 }
 
 </style>

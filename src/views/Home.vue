@@ -34,13 +34,10 @@ export default {
 		const navLinks = this.$refs.navBar.$refs.navLinks;
 		var options = { rootMargin: "-200px" };
 
-
-
 		const sectionObserver = new IntersectionObserver( entries => {
 			entries.forEach( entry => {
 
-				if( entry.isIntersecting )
-				{
+				if( entry.isIntersecting ) {
 					navLinks.querySelector('a.active').classList.remove('active');
 					navLinks.querySelector( `a#${entry.target.id}Link` ).classList.add('active');
 				}

@@ -10,22 +10,22 @@
 
         <div class="flex justify-btw">
             <div class="about-box about-box-1">
-                <h4 class="head">Reach me</h4>
+                <h4 class="head flex center">Reach me</h4>
                 <div class="mid">
                     <a href="mailto:shruthijana501@gmail.com">shruthijana501@gmail.com</a>
                     <a href="https://www.linkedin.com/in/shruthi-janardhanan-3870301a5/" target="_blank">LinkedIn</a>
                 </div>
                 <div class="body">
-                    <span>UI/UX Designer</span>
+                    <span>UI Designer</span>
                     <p>A passionate UI designer who wishes to develop perfect and well-developed designs that are user-friendly. The obsession for a perfect and seemless design in any app I used made me choose this path as my career.  </p>
                 </div>
             </div>
             <div class="about-box about-box-2">
-                <h4 class="head">Know me</h4>
+                <h4 class="head flex center">Know me</h4>
                 <div class="mid">
                     <p>
                         I love working on creative designs that can bring in the best User Experience.
-                        <router-link :to="{name: 'know-more'}" @click.native="scrollToTop">More</router-link>
+                        <router-link :to="{name: 'know-more'}" @click.native="scrollToTop" class="rm-link">Read More</router-link>
                     </p>
                 </div>
                 <div class="body">
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="about-box about-box-3">
-                <h4 class="head">Connect</h4>
+                <h4 class="head flex center">Connect</h4>
                 <div class="mid flex justify-btw align-center">
                     <a href="https://www.instagram.com/shru_thi20/" target="_blank"> <div class="icons-sprite insta"></div> </a>
                     <a href="https://www.behance.net/shruthijanardh" target="_blank"> <div class="icons-sprite behance"></div> </a>
@@ -76,7 +76,7 @@ export default {
 
 .about-box
 {
-    width: 30%;
+    width: 31%;
     margin: 20px 0;
 }
 
@@ -84,25 +84,26 @@ export default {
 {
     text-align: center;
     width: 100%;
-    height: 50px;
+    height: 89px;
     background: #000000;
     border-radius: 10px;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 50px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
     color: #FFB800;
 }
 
 .mid
 {
-    padding: 40px 0;
-    height: 175px;
+    padding: 40px 0 100px;
+    height: 250px;
 
     a, p
     {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 20px;
         line-height: 1.5;
+        margin-bottom: 12px;
     }
 
     a
@@ -114,6 +115,12 @@ export default {
         .about-box-1 & { display: block; }
 
         .about-box-3 &:hover { transform: scale(1.2, 1.2); }
+    }
+
+    .rm-link {
+        font-weight: 600;
+        margin-top: 15px;
+        display: block;
     }
 
     p { text-align: justify; }
@@ -150,7 +157,7 @@ export default {
 
 .body
 {
-    height: 250px;
+    height: 370px;
     padding: 25px 30px;
     background: #FFE9AF;
     border-radius: 10px;
@@ -158,19 +165,19 @@ export default {
     span
     {
         display: block;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 1.5;
         color: #000000;
-        padding-left: 30px;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 45px;
+        text-align: center;
     }
 
     p
     {
         font-weight: 400;
-        font-size: 18px;
-        line-height: 1.5;
+        font-size: 20px;
+        line-height: 35px;
         text-align: justify;
     }
 }

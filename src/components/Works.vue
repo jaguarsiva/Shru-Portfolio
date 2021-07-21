@@ -3,8 +3,8 @@
 
     <img src="../assets/patterns/works_top_left.png" alt="pattern" class="top-left">
     <img src="../assets/patterns/works_top_right.png" alt="pattern" class="top-right">
-    <img src="../assets/patterns/works_bottom_left.png" alt="pattern" class="bottom-left" v-if="type === 'all'">
-    <img src="../assets/patterns/works_bottom_right.png" alt="pattern" class="bottom-right" v-if="type === 'all'">
+    <img src="../assets/patterns/works_bottom_left.png" alt="pattern" class="bottom-left">
+    <img src="../assets/patterns/works_bottom_right.png" alt="pattern" class="bottom-right">
 
     <div class="container">
 
@@ -23,103 +23,116 @@
                 <div class="icons-sprite dribble-colored"></div>
                 Dribble
             </a>
+            <a href="https://shruthijana.medium.com" class="flex align-center" target="_blank">
+                <img src="../assets/medium colored.png" class="md-clred">
+                Medium
+            </a>
         </div>
 
-        <div class="tabs-box flex" ref="btns">
-            <button class="btn fancy-btn active" @click.prevent="handleButtonClick">All</button>
-            <button class="btn fancy-btn" @click.prevent="handleButtonClick">Photography</button>
-            <button class="btn fancy-btn" @click.prevent="handleButtonClick">Mobile App</button>
-            <button class="btn fancy-btn" @click.prevent="handleButtonClick">Website</button>
-            <button class="btn fancy-btn" @click.prevent="handleButtonClick">Poster</button>
-        </div>
-
-        <div class="works-outer flex justify-btw">
-            <a href="https://www.behance.net/gallery/112400129/A-Mobile-Photography"
+        <div class="works-outer flex">
+            <a href="https://www.behance.net/gallery/122545153/Website-Cafe"
                 target="_blank"
-                class="works-box flex center"
-                v-if="type === 'all' || type === 'photography'">
-                <img src="../assets/work/work1.png" alt="works">
+                class="works-box flex center">
+                <img src="../assets/work/cafe.png" alt="works">
                 <h4 class="flex center">
-                    The Bustling City
-                    <br />
-                    A mobile photography
+                    Cafe - Website
                 </h4>
             </a>
-            <a href="https://www.behance.net/gallery/112888517/Hairstyle-Generator-App"
+            <a href="https://www.behance.net/gallery/122352719/Landing-page-and-Social-media-post"
                 target="_blank"
-                class="works-box flex center"
-                v-if="type === 'all' || type === 'mobile app'">
-                <img src="../assets/work/work2.png" alt="works">
+                class="works-box flex center">
+                <img src="../assets/work/zpay.png" alt="works">
                 <h4 class="flex center">
-                    Hairstyle Generator
-                    <br />
-                    Mobile app
+                    E-Payment
                 </h4>
             </a>
-            <a href="https://www.behance.net/gallery/113334255/DIY-Home-Decors-App"
+            <a href="https://www.behance.net/gallery/120246243/Covid-Watch-Mobile-App"
                 target="_blank"
-                class="works-box flex center"
-                v-if="type === 'all' || type === 'mobile app'">
-                <img src="../assets/work/work3.png" alt="works">
+                class="works-box flex center">
+                <img src="../assets/work/covidapp.png" alt="works">
                 <h4 class="flex center">
-                    DIY Home Decors
-                    <br />
-                    A mobile App
+                    Covid App
                 </h4>
             </a>
-            <a href="https://www.behance.net/gallery/114041181/Travel-Landing-page"
+            <a href="https://www.behance.net/gallery/119696569/YouTube-Online-Learning"
                 target="_blank"
                 class="works-box flex center"
-                v-if="type === 'all' || type === 'website'">
-                <img src="../assets/work/work4.png" alt="works">
+            >
+                <img src="../assets/work/etutor.png" alt="works">
                 <h4 class="flex center">
-                    Travel Landing page
-                    <br />
-                    Website
+                    E-Tutor- Youtube
                 </h4>
             </a>
-            <a href="https://www.behance.net/gallery/114864413/A-winter-clothing-store"
+            <a href="https://www.behance.net/gallery/118031223/Illustrator-World-Cup-Heros"
                 target="_blank"
-                class="works-box flex center"
-                v-if="type === 'all' || type === 'website'">
-                <img src="../assets/work/work5.png" alt="works">
+                class="works-box flex center">
+                <img src="../assets/work/msd.png" alt="works">
                 <h4 class="flex center">
-                    Winter Clothing Store
-                    <br />
-                    Website
-                </h4>
-            </a>
-            <a href="https://www.behance.net/gallery/115341975/Mobile-Fitness-Tracker"
-                target="_blank"
-                class="works-box flex center"
-                v-if="type === 'all' || type === 'mobile app'">
-                <img src="../assets/work/work6.png" alt="works">
-                <h4 class="flex center">
-                    Fitness Generator
-                    <br />
-                    Mobile App
+                    Illustrations
                 </h4>
             </a>
             <a href="https://www.behance.net/gallery/115817357/A-Mobile-travel-guide-App"
                 target="_blank"
-                class="works-box flex center"
-                v-if="type === 'all' || type === 'mobile app'">
-                <img src="../assets/work/work7.png" alt="works">
+                class="works-box flex center">
+                <img src="../assets/work/travello.png" alt="works">
                 <h4 class="flex center">
-                    Travello- A mobile
-                    <br />
-                    Travel Guide
+                    Travel Blog App
+                </h4>
+            </a>
+            <a href="https://www.behance.net/gallery/115444329/Doodle-Art"
+                target="_blank"
+                class="works-box flex center">
+                <img src="../assets/work/doodles.png" alt="works">
+                <h4 class="flex center">
+                    Doodles
                 </h4>
             </a>
             <a href="https://www.behance.net/gallery/115442065/Womens-Rights-Awareness-Poster"
                 target="_blank"
-                class="works-box flex center"
-                v-if="type === 'all' || type === 'poster'">
-                <img src="../assets/work/work8.png" alt="works">
+                class="works-box flex center">
+                <img src="../assets/work/woman.png" alt="works">
                 <h4 class="flex center">
-                    Women’s Rights
-                    <br />
-                    Awareness Poster
+                    For Women- Poster
+                </h4>
+            </a>
+            <a href="https://www.behance.net/gallery/115341975/Mobile-Fitness-Tracker"
+                target="_blank"
+                class="works-box flex center">
+                <img src="../assets/work/watch.png" alt="works">
+                <h4 class="flex center">
+                    Smart watch
+                </h4>
+            </a>
+            <a href="https://www.behance.net/gallery/114864413/A-winter-clothing-store"
+                target="_blank"
+                class="works-box flex center">
+                <img src="../assets/work/clothing.png" alt="works">
+                <h4 class="flex center">
+                    Clothing-Website
+                </h4>
+            </a>
+            <a href="https://www.behance.net/gallery/114041181/Travel-Landing-page"
+                target="_blank"
+                class="works-box flex center">
+                <img src="../assets/work/travel.png" alt="works">
+                <h4 class="flex center">
+                    Travel - Website
+                </h4>
+            </a>
+            <a href="https://www.behance.net/gallery/113334255/DIY-Home-Decors-App"
+                target="_blank"
+                class="works-box flex center">
+                <img src="../assets/work/diy.png" alt="works">
+                <h4 class="flex center">
+                    DIY- Mobile app
+                </h4>
+            </a>
+            <a href="https://www.behance.net/gallery/112400129/A-Mobile-Photography"
+                target="_blank"
+                class="works-box flex center">
+                <img src="../assets/work/photo.png" alt="works">
+                <h4 class="flex center">
+                    Mobile Photography
                 </h4>
             </a>
         </div>
@@ -134,19 +147,7 @@ import SideBadge from '@/components/SideBadge.vue';
 export default {
     components: {
         SideBadge,
-    },
-    data() {
-        return {
-            type: 'all'
-        }
-    },
-    methods: {
-        handleButtonClick(e) {
-            this.$refs.btns.querySelector('.active').classList.remove('active');
-            e.target.classList.add('active');
-            this.type = e.target.innerText.toLowerCase();
-        }
-    },
+    }
 }
 </script>
 <style lang="less" scoped>
@@ -161,13 +162,13 @@ export default {
         position: relative;
     }
 
-    h2::after { width: 60px; }
+    h2::after { width: 100px; }
 }
 
-p
-{
-    font-weight: 600;
+p {
+    font-weight: 400;
     font-size: 20px;
+    line-height: 30px;
 }
 
 .links-box
@@ -180,12 +181,14 @@ p
         font-size: 23px;
         color: #000000;
 
-        &:first-child { margin-right: 30px };
+        &:not(:last-child) { margin-right: 40px };
 
         &:hover { text-decoration: underline; opacity: 0.8; }
     }
 
-    .icons-sprite { margin-right: 10px; }
+    .icons-sprite, .md-clred { margin-right: 10px; }
+
+    .md-clred { width: 34.5px; height: 32px; }
 }
 
 .behance-colored
@@ -202,42 +205,19 @@ p
     background-position: -107px -47px;
 }
 
-.tabs-box
-{
-    .btn.fancy-btn
-    {
-        background: #FFB800;
-        border-radius: 15px;
-        width: 175px;
-        height: 45px;
-        margin-right: 30px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        font-weight: bold;
-        font-size: 18px;
-
-        &::after { background-color: #ff8e00; }
-
-        &:hover::after { transform: scaleX(0); }
-
-        &.active { color: #FFFFFF; }
-
-        &.active::after { transform: scaleX(1); transition: transform 0.3s ease; }
-    }
-}
-
-.works-outer
-{
+.works-outer {
     margin-top: 100px;
+    justify-content: space-around;
 }
 
 .works-box
 {
-    width: calc(50% - 25px);
-    margin-bottom: 75px;
+    width: 31%;
+    margin: 0 0 50px;
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
     cursor: pointer;
+    border-radius: 10px;
 
     img
     {
@@ -248,22 +228,23 @@ p
     h4
     {
         position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
         color: #000;
-        top: 0; left: 0;
-        height: 100%;
-        width: 100%;
-        font-family: 'Oleo Script', cursive;
-        font-size: 35px;
-        line-height: 1.5;
+        width: 85%;
+        padding: 15px 10px;
+        background: #fff;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 45px;
         text-align: center;
-        background: linear-gradient(135deg, #FFFFFF 0%, rgba(190, 190, 190, 0.1) 100%);
-        border-radius: 20px;
+        border-radius: 5px;
         opacity: 0;
         transition: opacity 0.5s linear;
     }
 
-    &:hover
-    {
+    &:hover, &:focus, &:active {
+
         box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
 
         img { filter: blur(15px); }
@@ -335,13 +316,6 @@ p
     .links-box { justify-content: center; }
 
     .top-right, .top-left { display: none; }
-
-    .tabs-box .btn.fancy-btn
-    {
-        width: 175px;
-        height: 45px;
-        margin: 15px auto;
-    }
 }
 
 @media only screen and (max-width: 767px)
@@ -349,13 +323,6 @@ p
     .works { margin-bottom: 25px; }
 
     .works-box { width: 100%; max-width: 500px; margin-left: auto; margin-right: auto; }
-
-    .tabs-box .btn.fancy-btn
-    {
-        width: 100%;
-        max-width: 320px;
-        margin: 12px auto;
-    }
 
     .bottom-left, .bottom-right { display: none; }
 

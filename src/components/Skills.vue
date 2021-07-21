@@ -85,13 +85,14 @@ export default {
 
     .container { position: relative; justify-content: space-around; }
 
-    h2::after { width: 60px; }
+    h2::after { width: 100px; }
 }
 
 p
 {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 25px;
+    line-height: 37px;
 }
 
 .skill-box
@@ -100,8 +101,9 @@ p
 
     h4
     {
-        font-weight: 600;
-        font-size: 20px;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 37px;
         margin-bottom: 10px;
     }
 
@@ -128,13 +130,13 @@ p
 {
     .progress-bar
     {
-        span.adobe { width: 90%; }
+        span.adobe { width: 60%; }
 
-        span.figma { width: 80%; }
+        span.figma { width: 90%; }
 
         span.prototyping { width: 70%; }
 
-        span.wireframing { width: 85%; }
+        span.wireframing { width: 60%; }
     }
 }
 
