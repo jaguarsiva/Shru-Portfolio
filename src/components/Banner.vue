@@ -6,13 +6,16 @@
     <img src="../assets/patterns/banner_right_before.png" alt="pattern" class="right-before">
     <img src="../assets/patterns/banner_right_after.png" alt="pattern" class="right-after">
 
-    <div class="container flex">
+    <div class="container flex" :class="{ 'more': more }">
         <div class="banner-contents">
-            <h1>
+            <h1 v-if="!more">
                 Hello! I am Shruthi
             </h1>
-            <h2>UI DESIGNER</h2>
-            <a :href="`${publicPath}resume.pdf`" download="Shru's Resume.pdf" class="btn fancy-btn flex center ml-auto mr-auto">
+            <h3 v-if="more">
+                Know more about <span>Shruthi..</span>
+            </h3>
+            <h2 v-if="!more">UI DESIGNER</h2>
+            <a v-if="!more" :href="`${publicPath}resume.pdf`" download="Shru's Resume.pdf" class="btn fancy-btn flex center ml-auto mr-auto">
                 Resume
                 <div class="icons-sprite download"></div>
             </a>
@@ -31,6 +34,12 @@ export default
         return {
             publicPath: process.env.BASE_URL
         }
+    },
+    props: {
+        more: {
+            type: Boolean,
+            default: false
+        },
     },
 	mounted () {
 
@@ -58,6 +67,10 @@ export default
     margin-bottom: 75px;
 
     & .container { position: relative; }
+
+    .more {
+        min-height: 600px;
+    }
 }
 
 .banner-contents
@@ -82,6 +95,18 @@ h2
     line-height: 90px;
     color: #FFB800;
     margin: 0 0 40px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 90px;
+    color: #000;
+    margin: 0 0 40px;
+
+    span {
+        color: #FFB800;
+    }
 }
 
 .btn.fancy-btn
@@ -250,7 +275,7 @@ h2
         span { font-size: 33px; }
     }
 
-    h2 { font-size: 33px; margin: 0 0 40px; line-height: 1.5; }
+    h2, h3 { font-size: 33px; margin: 0 0 40px; line-height: 1.5; }
 
     .btn.fancy-btn { width: 100%; max-width: 300px; }
 

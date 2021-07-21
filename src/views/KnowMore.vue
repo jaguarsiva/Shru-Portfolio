@@ -4,13 +4,8 @@
         <img src="../assets/know_more/know_more_top.png" alt="patterns" class="top">
         <img src="../assets/know_more/know_more_bottom.png" alt="patterns" class="bottom">
 
-        <nav ref="nav">
-            <div class="container flex align-center">
-                 <router-link to="/" @click.native="scrollToTop">
-                    <img src="../assets/logo.png" alt="Shruthi's Portfolio logo" class="logo">
-                </router-link>
-            </div>
-        </nav>
+        <Navbar ref="navBar" />
+		<Banner :more="true" ref="banner" />
 
         <div class="container pb-100">
 
@@ -128,11 +123,19 @@
             </div>
 
         </div>
+
     </div>
 </template>
 
 <script>
+import Navbar from '@/components/Navbar.vue';
+import Banner from '@/components/Banner.vue';
+
 export default {
+    components: {
+		Navbar,
+		Banner
+	},
     mounted () {
 		const observer = new IntersectionObserver( entries => {
 			entries.forEach( entry => {
@@ -158,29 +161,9 @@ export default {
 
 .know-more
 {
-    background-color: #FFE9AF;
     padding-bottom: 100px;
     position: relative;
     z-index: 2;
-}
-
-nav
-{
-    height: 110px;
-    width: 100%;
-    z-index: 3;
-    background-color: #FFE9AF;
-
-    &.sticky
-    {
-        position: fixed;
-        top: 0;
-        left: 0;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-        animation: open 0.5s ease;
-    }
-
-    .container { height: 110px; }
 }
 
 @keyframes open
