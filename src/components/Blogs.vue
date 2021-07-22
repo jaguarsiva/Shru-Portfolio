@@ -1,10 +1,10 @@
 <template>
 <div class="blogs" id="blogs">
-    <SideBadge> Blogs </SideBadge>
     <img src="../assets/patterns/about_left.png" alt="pattern" class="blogs-bottom">
 
     <div class="container">
-            <h2 class="sub-headings">Blogs</h2>
+        <SideBadge> Blogs </SideBadge>
+        <h2 class="sub-headings">Blogs</h2>
         <div class="col-layout flex">
             <div class="half-col">
                 <div class="picture-box">
