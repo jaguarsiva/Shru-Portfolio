@@ -1,9 +1,6 @@
 <template>
     <div class="know-more">
 
-        <img src="../assets/know_more/know_more_top.png" alt="patterns" class="top">
-        <img src="../assets/know_more/know_more_bottom.png" alt="patterns" class="bottom">
-
         <Navbar ref="navBar" />
 		<Banner :more="true" ref="banner" />
 
@@ -23,6 +20,7 @@
                 </div>
                 <div class="box">
                     <h4 class="side-heading">My Perspective of Design</h4>
+                    <img src="../assets/patterns/skills_left.png" alt="patterns" class="top">
                     <p>
                         For me the best User experience is the key to success in the design field.
                         <br />
@@ -40,7 +38,7 @@
                             <img src="../assets/know_more/movies/movie1.png" alt="movie image" />
                             <span>Harry Potter </span>
                         </div>
-                        <div class="img-box">
+                            <div class="img-box">
                             <img src="../assets/know_more/movies/movie2.png" alt="movie image" />
                             <span>Padayappa</span>
                         </div>
@@ -86,13 +84,13 @@
                             The story that began  with the Southern part of India and to be continued all over the world.
                             <br />
                             <br />
-                            Born in Salem and brought up in Coimbatore and Chennai but  have my  roots in Tirunelveli. Got me schooling and college done in Chennai.
+                            Born in Salem and brought up in Coimbatore and Chennai but have my  roots in Tirunelveli. Got my schooling and college done in Chennai.
                         </p>
                     </div>
 
                     <div class="sub-box">
                         <h4 class="side-heading">My Sports Interest</h4>
-                        <div class="flex nowrap align-center">
+                        <div class="flex nowrap sports">
                             <img src="../assets/know_more/sports.png" alt="sports image" />
                             <p>Being a sports enthusiast I generally love all the sports. But, given a chance that I can play or watch only one sport for the rest of my life I’d choose Cricket. That’s the love I have for the sport. </p>
                         </div>
@@ -100,6 +98,7 @@
 
                 </div>
                 <div class="box">
+                    <img src="../assets/patterns/works_bottom_right.png" alt="patterns" class="bottom">
                     <h4 class="side-heading">My Inspirations</h4>
                     <div class="flex justify-btw">
                         <div class="img-box">
@@ -202,9 +201,9 @@ h4.side-heading
 
 p
 {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.5;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
     text-align: justify;
 }
 
@@ -212,6 +211,7 @@ p
 {
     width: calc(50% - 40px);
     margin: 40px 0;
+    position: relative;
 }
 
 .img-box
@@ -221,16 +221,18 @@ p
 
     img
     {
-        width: 100%;
+        max-height: 100%;
+        max-width: 100%;
         border-radius: 10px;
-        box-shadow: 0px 0px 4px rgb(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 4px rgb(0, 0, 0, 0.01);
     }
 
     span
     {
         display: block;
-        font-weight: bold;
         font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
         text-align: center;
         margin-top: 12px;
     }
@@ -242,26 +244,26 @@ p
 
     img
     {
-        width: 50%;
-        margin: 12px;
+        width: 250px;
+        margin-right: 40px;
     }
 }
 
 .top
 {
     position: absolute;
-    left: 0; bottom: 150px;
-    height: 90%;
+    right: -150px;
+    bottom: 0;
     z-index: -1;
 }
 
 .bottom
 {
     position: absolute;
-    left: 0; bottom: 150px;
-    width: 100vw;
+    right: -325px;
+    bottom: 100px;
     z-index: -1;
-    opacity: 0.6;
+    height: 1000px;
 }
 
 @media only screen and (max-width: 1440px)
@@ -269,8 +271,6 @@ p
     .know-more { padding-bottom: 50px; }
 
     .pb-100 { padding-bottom: 25px; }
-
-    .top, .bottom { bottom: 75px; }
 }
 
 @media only screen and (max-width: 1023px)
@@ -290,7 +290,7 @@ p
 
     .pb-100 { padding-bottom: 50px; }
 
-    .top, .bottom { bottom: 125px; }
+    .top, .bottom { display: none; }
 }
 
 @media only screen and (max-width: 767px)

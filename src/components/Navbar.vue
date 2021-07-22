@@ -9,32 +9,32 @@
 
         <ul class="nav-links flex align-center" ref="navLinks" :class="{'opened' : menuOpened, 'menu-close': isMenuClosing}">
             <li>
-                <a href="#home" class="links flex align-center active" @click="handleClick" id="homeLink">
+                <a href="/#home" class="links flex align-center active" @click="handleClick" id="homeLink">
                     Home
                 </a>
             </li>
             <li>
-                <a href="#about" class="links flex align-center" @click="handleClick" id="aboutLink">
+                <a href="/#about" class="links flex align-center" @click="handleClick" id="aboutLink">
                     About
                 </a>
             </li>
             <li>
-                <a href="#skills" class="links flex align-center" @click="handleClick" id="skillsLink">
+                <a href="/#skills" class="links flex align-center" @click="handleClick" id="skillsLink">
                     Skills
                 </a>
             </li>
             <li>
-                <a href="#works" class="links flex align-center" @click="handleClick" id="worksLink">
+                <a href="/#works" class="links flex align-center" @click="handleClick" id="worksLink">
                     Works
                 </a>
             </li>
             <li>
-                <a href="#blogs" class="links flex align-center" @click="handleClick" id="blogsLink">
+                <a href="/#blogs" class="links flex align-center" @click="handleClick" id="blogsLink">
                     Blogs
                 </a>
             </li>
             <li>
-                <a href="#contact" class="btn fancy-btn flex center" id="contactLink" @click="handleClick" >
+                <a href="/#contact" class="btn fancy-btn flex center" id="contactLink" @click="handleClick" >
                     Contact
                 </a>
             </li>
