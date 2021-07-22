@@ -44,6 +44,10 @@ export default {
     position: relative;
     margin: 125px 0 100px;
 
+    .container {
+        position: relative;
+    }
+
     h2::after { width: 60px; }
 }
 
