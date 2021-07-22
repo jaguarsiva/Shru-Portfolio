@@ -9,7 +9,7 @@
             <div class="half-col">
                 <div class="picture-box">
                     <div class="yellow-box"></div>
-                    <img src="../assets/ola.png" alt="ola image" class="ola ml-auto mr-auto">
+                    <img src="../assets/ola.png" alt="ola image" class="ola mr-auto">
                 </div>
             </div>
             <div class="half-col contents">
@@ -63,7 +63,7 @@ export default {
     {
         position: absolute;
         bottom: 150px;
-        left: 0;
+        left: -158px;
         height: 200px;
         width: 780px;
         background-color: #FFB800;
@@ -83,7 +83,7 @@ export default {
 }
 
 .contents {
-    padding-left: 75px;
+    padding-left: 25px;
 }
 
 h4 {
